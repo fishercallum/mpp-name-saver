@@ -62,13 +62,13 @@
 const startNameSaverPromotor = () => {
 	let logPrefix = '[Name Server for Multiplayer Piano Promotor v2025.01.04] ';
 	console.log(`${logPrefix}Running.`);
-	if (MPP.client.channel._id !== 'test/nickname saver') {
+	if (MPP.client.channel._id !== 'test/Save Your Nickname') {
 		console.log(`${logPrefix}Cancelled - Not in correct channel.`);
 		return;
 	}
 	let ad = 'Save your M.P.P. nickname: https://bit.ly/SaveOurNames - Add userscript to start saving your nickname.';
 	let sendAd = () => {
-		if (MPP.client.channel._id !== 'test/nickname saver') return;
+		if (MPP.client.channel._id !== 'test/Save Your Nickname') return;
 		MPP.chat.send(ad);
 	}
 	setInterval(sendAd, 60000); 
