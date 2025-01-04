@@ -5,18 +5,7 @@
 // @license      Unlicense
 // @description  Promotor for the Name Saver script. Auto-Save & Set your nickname on Multiplayer Piano. No more 'Anonymous.'
 // @author       Callum Fisher <cf.fisher.bham@gmail.com>
-// @match        https://mppclone.com/*
-// @match        https://mpp.8448.space/*
-// @match        https://multiplayerpiano.com/*
-// @match        https://multiplayerpiano.net/*
-// @match        https://multiplayerpiano.org/*
-// @match        https://piano.mpp.community/*
-// @match        https://mpp.autoplayer.xyz/*
-// @match        https://mpp.hyye.tk/*
-// @match        https://mppclone.hri7566.info/*
-// @match        https://piano.ourworldofpixels.com/*
-// @match        https://mpp.hri7566.info/*
-// @match        https://mppclone.hri7566.info/*
+// @match        *://multiplayerpiano.com/*
 // @grant        none
 // ==/UserScript==
 
