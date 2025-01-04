@@ -71,7 +71,8 @@ const startNameSaverPromotor = () => {
 		if (MPP.client.channel._id !== 'test/Save Your Nickname') return;
 		MPP.chat.send(ad);
 	}
-	setInterval(sendAd, 60000); 
+	setInterval(sendAd, 60000);
+	MPP.client.on('participant added', sendAd);
 }
 
 // Start:
