@@ -8,6 +8,6 @@ This is a simple script that attempts to rectify this issue. No more 'Anonymous.
 
 ## Download & Install
 
-[Install Name Saver as a userscript](https://greasyfork.org/scripts/521353) to start saving your nickname on Multiplayer Piano.
+[Install Name Saver as a userscript](https://greasyfork.org/scripts/522853) to start saving your nickname on Multiplayer Piano.
 
 Note: This issue only affects [https://multiplayerpiano.com/](https://multiplayerpiano.com/) at the moment.
