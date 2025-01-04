@@ -18,6 +18,8 @@
 
 	Userscript: https://greasyfork.org/scripts/522853
 
+	Repository: https://github.com/slowstone72/MPP-name-saver
+
 	Callum Fisher <cf.fisher.bham@gmail.com>
 
 	This is free and unencumbered software released into the public domain.
