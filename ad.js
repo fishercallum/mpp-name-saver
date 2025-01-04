@@ -66,7 +66,7 @@ const startNameSaverPromotor = () => {
 		console.log(`${logPrefix}Cancelled - Not in correct channel.`);
 		return;
 	}
-	let ad = 'Save your M.P.P. nickname: https://greasyfork.org/scripts/522853 - Install userscript to get started.';
+	let ad = 'Save your M.P.P. nickname: https://bit.ly/SaveOurNames - Add userscript to start saving your nickname.';
 	let sendAd = () => {
 		if (MPP.client.channel._id !== 'test/nickname saver') return;
 		MPP.chat.send(ad);
