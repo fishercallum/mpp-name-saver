@@ -6,6 +6,8 @@ Multiplayer Piano constantly resets your nickname every time you revisit the pag
 
 This is a simple script that attempts to rectify this issue. No more 'Anonymous.'
 
-[Install it as a userscript](https://greasyfork.org/scripts/521353) to get started with saving your nickname on Multiplayer Piano.
+## Download & Install
 
-(This issue only affects [https://multiplayerpiano.com/](https://multiplayerpiano.com/) as of writing.)
+[Install Name Saver as a userscript](https://greasyfork.org/scripts/521353) to get started with saving your nickname on Multiplayer Piano.
+
+Note: This issue only affects [https://multiplayerpiano.com/](https://multiplayerpiano.com/) as of writing.
