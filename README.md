@@ -10,7 +10,40 @@ This is a simple script that attempts to rectify this issue. No more 'Anonymous.
 
 [Install Name Saver as a userscript](https://greasyfork.org/scripts/522853) to start saving your nickname on Multiplayer Piano.
 
-Note: This issue only affects [https://multiplayerpiano.com/](https://multiplayerpiano.com/) at the moment.
+Note: This issue only affects [multiplayerpiano.com](https://multiplayerpiano.com/) at the moment.
+
+## Questions & Answers
+
+**Q: Why would I want this?**
+
+A: You might not want your nickname to reset to 'Anonymous' or another name when you visit Multiplayer Piano. This script aims to fix that.
+
+**Q: Doesn't my name already save?**
+
+A: Sometimes. Here's why:
+- You may land on an ID that you've previously used, where your nickname was set.
+- However, this requires reloading multiple times to test IDs, which can be tedious.  
+This script handles this process automatically, ensuring your nickname is consistent.
+
+**Q: Didn't MPP used to save nicknames?**
+
+A: Yes. Multiplayer Piano used to save consistent user IDs and nicknames, but this hasn't been working properly for a while.
+
+**Q: How does this script work?**
+
+A: The script saves your nickname in your browser's **localStorage** and sets it automatically every time you visit Multiplayer Piano. This ensures your nickname stays consistent across sessions on the same device.
+
+**Q: Does this script sync my nickname across devices?**
+
+A: No, the script uses **localStorage**, which is specific to the **browser** and **device** you're using. If you want the same nickname on another device, you'll need to set it there manually.
+
+**Q: Is this safe to use?**
+
+A: Yes, the script is open source and doesn't collect or send your data anywhere. It only runs in your browser to manage your nickname locally.
+
+**Q: Why is there a bit.ly link?**
+
+A: The bit.ly link is simply a short URL to make sharing easier. You can also use the direct link to the script on Greasyfork: [greasyfork.org/scripts/522853](https://greasyfork.org/scripts/522853).
 
 ## Share
 
