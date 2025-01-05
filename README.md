@@ -39,7 +39,7 @@ A: No, the script uses **localStorage**, which is specific to the **browser** an
 
 **Q: Is this safe to use?**
 
-A: Yes, the script is open source and doesn't collect or send your data anywhere. It only runs in your browser to manage your nickname locally.
+A: Yes, the script is open source and doesn't collect or send your data anywhere. It only runs in your browser to manage your nickname locally. Additionally, the script is released into the public domain, so you're free to use, modify, and share it without restrictions.
 
 **Q: Why is there a bit.ly link?**
 
