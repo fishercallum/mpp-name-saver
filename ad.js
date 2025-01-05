@@ -73,7 +73,7 @@ const startNameSaverPromotor = () => {
 		sendMessage(ad.replace(/%name%/g, msg.name));
 		lastAdMsg = Date.now();
 	}
-	setInterval(sendAd, 60000);
+	// setInterval(sendAd, 60000);
 	MPP.client.on('participant added', sendAd);
 }
 
