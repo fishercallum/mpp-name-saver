@@ -37,7 +37,7 @@
 
 const Client = require('./Client.js');
 
-const ad = 'Hi, %name%. Welcome to the Name Saver room. M.P.P. doesn\'t save your nickname by default, so I made a simple script that attempts to fix that. If you\'re interested, try it out: https://bit.ly/SaveOurNames';
+const ad = 'Hi, %name%. M.P.P. doesn\'t save your nickname by default, so I made a simple script to try to fix that. If you\'re interested, try it out: https://bit.ly/SaveOurNames';
 const desiredChannel = 'test/Save Your Nickname';
 const desiredName = 'slowstone72\'s bot';
 const antiSpamTimeout = 120000;
