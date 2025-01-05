@@ -55,10 +55,23 @@ const startNameSaverPromotor = () => {
 		console.log(`${logPrefix}Cancelled - Not in correct channel.`);
 		return;
 	}
-	let ad = 'Save your M.P.P. nickname: https://bit.ly/SaveOurNames - Add userscript to start saving your nickname.';
-	let sendAd = () => {
-		if (MPP.client.channel._id !== 'test/Save Your Nickname') return;
-		MPP.chat.send(ad);
+	let lastMessage = {
+		t: Date.now(),
+		m: ''
+	}
+	let sendMessage = input => {
+		if (input === lastMessage.m && Date.now() - lastMessage.t < 30000) return;
+		lastMessage = {
+			t: Date.now(),
+			m: input
+		}
+		MPP.chat.send(input);
+	}
+	let ad = 'Hi, %name%. Welcome to the Name Saver room! M.P.P. doesn\'t save your nickname by default, so I made a simple script that attempts to fix that. If you\'re interested, try it out: https://bit.ly/SaveOurNames';
+	let sendAd = msg => {
+		if (MPP.client.channel._id !== 'test/Save Your Nickname' || msg.id === MPP.client.getOwnParticipant().id) return;
+		sendMessage(ad.replace(/%name%/g, msg.name));
+		lastAdMsg = Date.now();
 	}
 	setInterval(sendAd, 60000);
 	MPP.client.on('participant added', sendAd);
