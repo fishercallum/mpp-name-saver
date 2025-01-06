@@ -1,7 +1,7 @@
 /*
 	"Name Saver for Multiplayer Piano - Promotor - Node.js"
 	ad-node.js - Main app.
-	2025.01.04 - 2025.01.05
+	2025.01.04 - 2025.01.06
 
 	Created to promote the Name Saver userscript.
 
@@ -41,7 +41,6 @@ const ad = 'Hi, %name%. M.P.P. doesn\'t save your nickname by default, so I made
 const desiredChannel = 'test/Save Your Nickname';
 const desiredName = '[bit.ly/SaveOurNames]';
 const antiSpamTimeout = 120000;
-// const lastWelcome = Date.now();
 
 let lastMessage = {
 	t: Date.now(),
@@ -49,10 +48,6 @@ let lastMessage = {
 }
 
 const client = new Client('wss://game.multiplayerpiano.com:443');
-
-client.start();
-
-client.setChannel(desiredChannel);
 
 /* const randomNum = (min, max) => {
 	return Math.floor(Math.random() * (max - min)) + min;
@@ -67,6 +62,16 @@ const sendMessage = input => {
 	client.sendArray([{
 		'm': 'a',
 		'message': input
+	}]);
+}
+
+const setName = () => {
+	if (client.getOwnParticipant().name === desiredName) return;
+	client.sendArray([{
+		'm': 'userset',
+		'set': {
+			'name': desiredName
+		}
 	}]);
 }
 
@@ -86,15 +91,15 @@ const checkClient = () => {
 	} else if (client.channel && client.channel._id !== desiredChannel) {
 		client.setChannel(desiredChannel);
 	} else if (client.getOwnParticipant().name !== desiredName) {
-		client.sendArray([{
-			'm': 'userset',
-			'set': {
-				'name': desiredName
-			}
-		}]);
+		setName();
 	}
 }
 
 setInterval(checkClient, 60000);
 
 client.on('participant added', sendAd);
+client.on('hi', setName);
+
+client.start();
+
+client.setChannel(desiredChannel);
