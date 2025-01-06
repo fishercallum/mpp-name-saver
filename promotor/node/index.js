@@ -3,7 +3,7 @@
 	ad-node.js - Main app.
 	2025.01.04 - 2025.01.06
 
-	Created to promote the Name Saver userscript.
+	Created to promote the Name Saver userscript - bit.ly/SaveOurNames
 
 	Repository: <https://github.com/slowstone72/MPP-name-saver>
 
