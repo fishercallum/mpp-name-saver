@@ -49,7 +49,7 @@
 */
 
 const startNameSaver = () => {
-	console.log('[Name Saver for Multiplayer Piano v1.0.1] Running.');
+	console.log('[Name Saver for Multiplayer Piano v1.0.2] Running.');
 	const setName = () => {
 		MPP.client.sendArray([{
 			'm': 'userset',
