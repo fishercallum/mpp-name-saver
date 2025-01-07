@@ -1,7 +1,7 @@
 /*
-	"Name Saver for Multiplayer Piano - Promotor - Node.js"
+	"Name Saver for Multiplayer Piano - Promotor - Node.js" - (v1.0.6)
 	index.js - Main app.
-	2025.01.04 - 2025.01.07 (v1.0.5)
+	2025.01.04 - 2025.01.07
 
 	Created to promote the Name Saver userscript - bit.ly/SaveOurNames
 
