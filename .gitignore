@@ -1,6 +1,3 @@
-
-Client.js
-package-lock.json
-package.json
-/node_modules
 /promotor/node/node_modules
+promotor/node/Client.js
+promotor/node/package-lock.json
