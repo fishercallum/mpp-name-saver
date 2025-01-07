@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Name Saver for Multiplayer Piano - Promotor
 // @namespace    https://github.com/slowstone72/MPP-name-saver
-// @version      1.0.7
+// @version      1.0.8
 // @license      Unlicense
 // @description  Promotor for the Name Saver script. Auto-Save & Set your nickname on Multiplayer Piano. No more 'Anonymous.'
 // @author       Callum Fisher <cf.fisher.bham@gmail.com>
@@ -52,7 +52,7 @@ const startNameSaverPromotor = () => {
 
 	// Define meta info:
 
-	let version = '1.0.7';
+	let version = '1.0.8';
 
 	let logPrefix = `[Name Server for Multiplayer Piano Promotor v${version}] `;
 
@@ -89,7 +89,7 @@ const startNameSaverPromotor = () => {
 
 	// Define ad message & ad send function:
 
-	let ad = 'Hi, %name%. M.P.P. doesn\'t save your nickname by default, so I made a simple userscript to try to fix that. If you\'re interested, try it out: bit.ly/SaveOurNames (greasyfork.org/scripts/522853)';
+	let ad = 'Hi, %name%. M.P.P. doesn\'t save your nickname by default, so I made a simple userscript to try to fix that. If you\'re interested, try it out: bit.ly/SaveOurNames (https://greasyfork.org/scripts/522853)';
 	let sendAd = msg => {
 		if (MPP.client.channel._id !== adChannel || msg.id === MPP.client.getOwnParticipant().id) return;
 		sendMessage(ad.replace(/%name%/g, msg.name));
