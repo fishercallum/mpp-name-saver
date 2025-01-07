@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Name Saver for Multiplayer Piano
 // @namespace    https://github.com/slowstone72/MPP-name-saver
-// @version      1.0.1
+// @version      1.0.2
 // @license      Unlicense
 // @description  Auto-Save & Set your nickname on Multiplayer Piano. No more 'Anonymous.'
 // @author       Callum Fisher <cf.fisher.bham@gmail.com>
@@ -50,26 +50,22 @@
 
 const startNameSaver = () => {
 	console.log('[Name Saver for Multiplayer Piano v1.0.1] Running.');
-	const setName = name => {
+	const setName = () => {
 		MPP.client.sendArray([{
 			'm': 'userset',
 			'set': {
 				'name': localStorage.nsNick
 			}
 		}]);
-		if (!MPP.client.isConnected() || MPP.client.getOwnParticipant().name !== name) {
-			setTimeout(() => {
-				setName(name);
-			}, 5000);
+		if (!MPP.client.isConnected() || MPP.client.getOwnParticipant().name !== localStorage.nsNick) {
+			setTimeout(setName, 5000);
 			return;
-		} else {
-			saveName();
 		}
 	}
 	const checkName = () => {
 		if (typeof localStorage.nsNick === 'undefined') localStorage.nsNick = MPP.client.getOwnParticipant().name;
 		if (MPP.client.getOwnParticipant().name !== localStorage.nsNick) {
-			setName(localStorage.nsNick);
+			setName();
 		}
 	}
 	const saveName = () => {
