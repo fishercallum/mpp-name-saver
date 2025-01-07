@@ -53,3 +53,12 @@ If you find the script useful, please consider sharing it with others using the 
 
 Or, simply copy the URL:
 `https://bit.ly/SaveOurNames`
+
+## Freedom
+
+This project is published under the [Unlicense](https://unlicense.org).
+
+Anyone is free to copy, modify, publish, use, compile, sell, or
+distribute this software, either in source code form or as a compiled
+binary, for any purpose, commercial or non-commercial, and by any
+means.
