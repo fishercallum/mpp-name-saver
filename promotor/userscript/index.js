@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Name Saver for Multiplayer Piano - Promotor
 // @namespace    https://github.com/slowstone72/MPP-name-saver
-// @version      1.0.4
+// @version      1.0.5
 // @license      Unlicense
 // @description  Promotor for the Name Saver script. Auto-Save & Set your nickname on Multiplayer Piano. No more 'Anonymous.'
 // @author       Callum Fisher <cf.fisher.bham@gmail.com>
@@ -50,7 +50,9 @@
 
 const startNameSaverPromotor = () => {
 
-	let logPrefix = '[Name Server for Multiplayer Piano Promotor v1.0.4] ';
+	let version = '1.0.5';
+
+	let logPrefix = `[Name Server for Multiplayer Piano Promotor v${version}] `;
 
 	console.log(`${logPrefix}Running.`);
 
