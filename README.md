@@ -56,7 +56,7 @@ Or, simply copy the URL:
 
 ## Freedom
 
-This project is published under the [Unlicense](https://unlicense.org).
+This project is released into the public domain under the [Unlicense](https://unlicense.org).
 
 Anyone is free to copy, modify, publish, use, compile, sell, or
 distribute this software, either in source code form or as a compiled
