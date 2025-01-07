@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Name Saver for Multiplayer Piano - Promotor
 // @namespace    https://github.com/slowstone72/MPP-name-saver
-// @version      1.0.6
+// @version      1.0.7
 // @license      Unlicense
 // @description  Promotor for the Name Saver script. Auto-Save & Set your nickname on Multiplayer Piano. No more 'Anonymous.'
 // @author       Callum Fisher <cf.fisher.bham@gmail.com>
@@ -52,7 +52,7 @@ const startNameSaverPromotor = () => {
 
 	// Define meta info:
 
-	let version = '1.0.6';
+	let version = '1.0.7';
 
 	let logPrefix = `[Name Server for Multiplayer Piano Promotor v${version}] `;
 
@@ -66,7 +66,7 @@ const startNameSaverPromotor = () => {
 
 	// Are we in the adChannel?
 
-	if (MPP.client.channel._id !== adChannel) { // No, do not proceed.
+	if (MPP.client.channel._id !== adChannel) { // No, do not proceed:
 		console.log(`${logPrefix}Cancelled - Not in correct channel.`);
 		return;
 	}
@@ -77,7 +77,6 @@ const startNameSaverPromotor = () => {
 		t: Date.now(),
 		m: ''
 	}
-
 
 	let sendMessage = input => {
 		if (input === lastMessage.m && Date.now() - lastMessage.t < 30000) return;
