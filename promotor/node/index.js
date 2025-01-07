@@ -1,7 +1,7 @@
 /*
 	"Name Saver for Multiplayer Piano - Promotor - Node.js"
 	ad-node.js - Main app.
-	2025.01.04 - 2025.01.07 (v1.0.3)
+	2025.01.04 - 2025.01.07 (v1.0.4)
 
 	Created to promote the Name Saver userscript - bit.ly/SaveOurNames
 
@@ -46,6 +46,9 @@ const wsServer = 'wss://game.multiplayerpiano.com:443';
 const ad = 'Hi, %name%. M.P.P. doesn\'t save your nickname by default, so I made a simple userscript to try to fix that. If you\'re interested, try it out: bit.ly/SaveOurNames (https://greasyfork.org/scripts/522853)';
 const desiredChannel = 'test/Save Your Nickname';
 const desiredName = '[bit.ly/SaveOurNames]';
+
+// Define antiSpam chat settings:
+
 const antiSpamTimeout = 120000;
 
 let lastMessage = {
