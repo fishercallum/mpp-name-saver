@@ -29,6 +29,10 @@ This script handles this process automatically, ensuring your nickname is consis
 
 A: Yes. Multiplayer Piano used to save consistent user IDs and nicknames, but this hasn't been working properly for a while.
 
+**Q: Can't I just use another website?**
+
+A: Yes. Multiplayer Piano isn't the only online piano available. This script was made for fun as a work-around for multiplayerpiano.com specifically. You can try alternatives like [pianoverse.net](https://pianoverse.net), [multiplayerpiano.net](https://multiplayerpiano.net) and [pianorhythm.io](https://pianorhythm.io) and [many more](https://pastebin.com/buTfcJYq).
+
 **Q: How does this script work?**
 
 A: The script saves your nickname in your browser's **localStorage** and sets it automatically every time you visit Multiplayer Piano. This ensures your nickname stays consistent across sessions on the same device.
