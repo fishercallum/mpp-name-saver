@@ -1,7 +1,7 @@
 /*
-	"Name Saver for Multiplayer Piano - Promotor - Node.js" - (v1.0.6)
+	"Name Saver for Multiplayer Piano - Promotor - Node.js" - (v1.0.7)
 	index.js - Main app.
-	2025.01.04 - 2025.01.07
+	2025.01.04 - 2025.01.09
 
 	Created to promote the Name Saver userscript - bit.ly/SaveOurNames
 
@@ -43,7 +43,7 @@ const Client = require('./Client.js');
 
 const wsServer = 'wss://game.multiplayerpiano.com:443';
 
-const ad = 'Hi, %name%. M.P.P. doesn\'t save your nickname by default, so I made a simple userscript to try to fix that. If you\'re interested, try it out: bit.ly/SaveOurNames (https://greasyfork.org/scripts/522853)';
+const ad = 'Welcome, %name%. M.P.P. doesn\'t save your nickname by default, so I made a userscript to help. Try it out! bit.ly/SaveOurNames (https://greasyfork.org/scripts/522853)';
 const desiredChannel = 'test/Save Your Nickname';
 const desiredName = '[bit.ly/SaveOurNames]';
 
