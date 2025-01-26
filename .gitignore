@@ -1,3 +1,4 @@
 /promotor/node/node_modules
 promotor/node/package-lock.json
 /userscript/release
+promotor/node/mppClient.js
