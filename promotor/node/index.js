@@ -1,5 +1,5 @@
 /*
-	"Name Saver for Multiplayer Piano - Promotor - Node.js" - (v1.0.9)
+	"Name Saver for Multiplayer Piano - Promotor - Node.js" - (v2.0.0)
 	index.js - Main app.
 	2025.01.04 - 2025.01.26
 
@@ -37,7 +37,7 @@
 
 // Fetch dependencies:
 
-const Client = require('./Client.js');
+const Client = require('./mppClient.js');
 
 // Define settings:
 
@@ -58,13 +58,12 @@ let lastMessage = {
 
 // Create new Multiplayer Piano client instance:
 
-const client = new Client(wsServer);
+const client = new Client({
+	server: wsServer,
+	channel: desiredChannel
+});
 
 // Define functions:
-
-/* const randomNum = (min, max) => {
-	return Math.floor(Math.random() * (max - min)) + min;
-} */
 
 // Define antiSpam sendMessage to chat function:
 
@@ -83,13 +82,7 @@ const sendMessage = input => {
 // Define setName function:
 
 const setName = () => {
-	if (client.getOwnParticipant().name === desiredName) return;
-	client.sendArray([{
-		'm': 'userset',
-		'set': {
-			'name': desiredName
-		}
-	}]);
+	if (client.getOwnParticipant().name !== desiredName) client.setName(desiredName);
 }
 
 // Define sendAd function:
@@ -103,10 +96,10 @@ const sendAd = msg => {
 // Define function to checkClient status: (name, channel, etc.)
 
 const checkClient = () => {
-	if (!client.isConnected()) { // Check if we've disconnected and attempt to reconnect:
-		client.stop();
+	if (!client.connected()) { // Check if we've disconnected and attempt to reconnect:
+		client.disconnect();
 		setTimeout(() => {
-			client.start();
+			client.connect();
 			client.setChannel(desiredChannel);
 		}, 5000);
 	} else if (client.channel && client.channel._id !== desiredChannel) { // Check if we're still in the desiredChannel:
@@ -122,11 +115,11 @@ setInterval(checkClient, 60000);
 
 // Listen for new users joining the channel:
 
-client.on('participant added', sendAd); // sendAd on user join
+client.on('userJoin', sendAd); // sendAd on user join
 
-// Listen for 'hi' message from server:
+// Listen for 'connect' message from client on server connect:
 
-client.on('hi', setName); // Set desiredName name on 'hi'
+client.on('connect', setName); // Set desiredName name on 'connect'
 
 // Start in desiredChannel:
 
