@@ -1,13 +1,13 @@
 /*
-	"Name Saver for Multiplayer Piano - Promotor - Node.js" - (v1.0.8)
+	"Name Saver for Multiplayer Piano - Promotor - Node.js" - (v1.0.9)
 	index.js - Main app.
-	2025.01.04 - 2025.01.09
+	2025.01.04 - 2025.01.26
 
 	Created to promote the Name Saver userscript - bit.ly/SaveOurNames
 
-	Repository: <https://github.com/slowstone72/MPP-name-saver>
+	Repository: https://github.com/cffisher/MPP-name-saver
 
-	Callum Fisher <cf.fisher.bham@gmail.com>
+	Callum Fisher cf.fisher.bham@gmail.com
 
 	This is free and unencumbered software released into the public domain.
 
